@@ -17,7 +17,7 @@ class KiranCalculator extends StatefulWidget {
 }
 
 class _KiranCalculatorState extends State<KiranCalculator> {
-  var _operation = ['Add', 'Subtract', 'Multiply', 'Divide'];
+  var _operation = ['Add', 'Subtract', 'Multiply', 'Divide', 'Modulus'];
   var _values = "Add";
   var _displayText = "";
 
@@ -114,6 +114,10 @@ class _KiranCalculatorState extends State<KiranCalculator> {
                           case "Divide":
                             var div = first/second;
                             _displayText = "Divide " +div.toStringAsFixed(0);
+                            break;
+                          case "Modulus":
+                            var mod = first%second;
+                            _displayText = "Modulus is " +mod.toStringAsFixed(0);
                             break;
                           default:
                             _displayText = "Something went wrong";
